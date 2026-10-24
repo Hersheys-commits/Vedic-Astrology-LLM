@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Jyotish — Vedic astrology, grounded in sources</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script>
+    try {
+      const saved = JSON.parse(localStorage.getItem("astro-rag-ui-v1") || "null");
+      const theme = saved?.settings?.theme;
+      document.documentElement.dataset.theme = theme === "dark" || theme === "light"
+        ? theme
+        : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch (_) {}
+  </script>
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div id="app-shell" class="app-shell" hidden>
+    <aside id="sidebar" class="sidebar" aria-label="Birth profile and settings">
+      <a class="brand" href="/" aria-label="Jyotish home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>jyotish</span>
+      </a>
+
+      <div class="sidebar-section-label">YOUR CHART</div>
+      <section class="profile-card" aria-labelledby="profile-heading">
+        <div class="profile-card-heading">
+          <span class="profile-icon" aria-hidden="true">✧</span>
+          <div class="profile-copy">
+            <h2 id="profile-heading">Birth profile</h2>
+            <p id="profile-place" class="profile-place"></p>
+          </div>
+          <button id="edit-profile" class="icon-button" type="button" aria-label="Edit birth details" title="Edit birth details">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z"/></svg>
+          </button>
+        </div>
+        <div id="profile-meta" class="profile-meta"></div>
+      </section>
+
+      <details class="advanced" id="advanced-settings">
+        <summary><span>Advanced settings</span><span class="chevron" aria-hidden="true">⌄</span></summary>
+        <div class="advanced-content">
+          <label for="ayanamsa">Ayanamsa</label>
+          <select id="ayanamsa">
+            <option value="lahiri">Lahiri (Chitrapaksha)</option>
+            <option value="raman">B. V. Raman</option>
+            <option value="krishnamurti">Krishnamurti (KP)</option>
+            <option value="yukteshwar">Yukteshwar</option>
+            <option value="fagan_bradley">Fagan/Bradley</option>
+          </select>
+
+          <label for="house-system">House system</label>
+          <select id="house-system">
+            <option value="whole_sign">Whole sign</option>
+            <option value="equal">Equal</option>
+            <option value="placidus">Placidus</option>
+          </select>
+
+          <label for="node-type">Lunar nodes</label>
+          <select id="node-type"><option value="mean">Mean nodes</option><option value="true">True nodes</option></select>
+
+          <label for="retrieval-strategy">Evidence retrieval</label>
+          <select id="retrieval-strategy">
+            <option value="hybrid">Recommended · hybrid</option>
+            <option value="metadata_only">Metadata only</option>
+            <option value="semantic_only">Semantic only</option>
+          </select>
+
+          <label for="top-k">Source passages</label>
+          <select id="top-k">
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option selected>5</option><option>7</option><option>10</option>
+          </select>
+
+          <label for="response-model">Answer generation model</label>
+          <select id="response-model">
+            <option value="gpt-5-mini">GPT-5-mini (default)</option>
+            <option value="astro-qwen-lora">Astro Qwen (local)</option>
+            <option value="astro-qwen-npu">Astro Qwen (Intel NPU)</option>
+          </select>
+          <p class="privacy-note">This selects the answer model only. Question analysis remains unchanged. The Intel NPU option requires the prepared OpenVINO model and Intel NPU runtime.</p>
+
+          <div class="settings-divider"></div>
+          <label for="theme-mode">Appearance</label>
+          <select id="theme-mode">
+            <option value="system">Use system setting</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+
+          <div class="settings-divider"></div>
+          <button id="clear-data" class="text-button danger-button" type="button">Clear saved profile and chat</button>
+          <p class="privacy-note">Your birth details and chat are saved only in this browser.</p>
+        </div>
+      </details>
+
+      <div class="sidebar-footer">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Answers grounded in traditional sources</span>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="topbar">
+        <button id="mobile-menu" class="icon-button mobile-menu" type="button" aria-label="Open sidebar" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="topbar-title"><span class="mobile-brand-mark" aria-hidden="true">✳</span><span>Vedic astrology assistant</span></div>
+        <span class="topbar-caption">A thoughtful guide, rooted in source texts</span>
+      </header>
+
+      <div id="transcript" class="transcript" role="log" aria-live="polite" aria-relevant="additions text"></div>
+
+      <div class="composer-wrap">
+        <div id="request-status" class="request-status" role="status" aria-live="polite"></div>
+        <form id="composer" class="composer">
+          <label class="sr-only" for="question-input">Ask about your chart</label>
+          <textarea id="question-input" rows="1" maxlength="2000" placeholder="Ask a question about your chart…" required></textarea>
+          <div class="composer-bottom">
+            <span class="composer-hint">Astrology offers traditional perspectives, not certainty.</span>
+            <button id="send-button" class="send-button" type="submit" aria-label="Send question" title="Send question">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
+          </div>
+        </form>
+        <p class="composer-disclaimer">Jyotish can support reflection; it should not replace professional advice.</p>
+      </div>
+    </main>
+  </div>
+
+  <div id="mobile-scrim" class="mobile-scrim" hidden></div>
+
+  <dialog id="profile-dialog" class="profile-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-topline">
+      <a class="brand" href="#" aria-label="Jyotish"><span class="brand-mark" aria-hidden="true">✳</span><span>jyotish</span></a>
+      <button id="dialog-close" class="icon-button dialog-close" type="button" aria-label="Close birth details" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 6-12 12M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="profile-dialog-content">
+      <div class="dialog-intro">
+        <div class="eyebrow">A PERSONALIZED READING</div>
+        <h1 id="dialog-title">Start with your birth details</h1>
+        <p>Your chart is calculated from the local date, time, and place of birth. You can change these any time.</p>
+      </div>
+
+      <form id="profile-form" novalidate>
+        <div class="form-row">
+          <div class="field-group">
+            <label for="birth-date">Date of birth</label>
+            <input id="birth-date" name="birth_date" type="date" required autocomplete="bday" />
+          </div>
+          <div class="field-group">
+            <label for="birth-time">Time of birth</label>
+            <input id="birth-time" name="birth_time" type="time" required step="60" />
+            <span class="field-hint">Local time at your birthplace</span>
+          </div>
+        </div>
+
+        <div class="field-group location-group">
+          <label for="place-search">Place of birth</label>
+          <div class="place-search-row">
+            <input id="place-search" type="search" placeholder="Search city, town, or address" autocomplete="off" minlength="2" maxlength="200" />
+            <button id="search-place" class="button-secondary search-button" type="button">Search</button>
+          </div>
+          <span class="field-hint">Choose a result to set the location and time zone.</span>
+          <div id="place-results" class="place-results" role="listbox" aria-label="Location search results" hidden></div>
+          <div id="selected-place" class="selected-place" aria-live="polite">No location selected yet</div>
+        </div>
+
+        <details class="map-picker">
+          <summary>Choose or fine-tune on a map</summary>
+          <p class="field-hint map-instructions">Select a point on the map or drag the pin. Map data © OpenStreetMap contributors.</p>
+          <div id="birth-map" class="birth-map" aria-label="Map for selecting birth location"></div>
+          <p id="map-fallback" class="field-hint map-fallback" hidden>The interactive map could not load. You can enter coordinates below.</p>
+          <div class="coordinate-row">
+            <div class="field-group"><label for="latitude">Latitude</label><input id="latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" placeholder="e.g. 28.6139" /></div>
+            <div class="field-group"><label for="longitude">Longitude</label><input id="longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" placeholder="e.g. 77.2090" /></div>
+          </div>
+        </details>
+
+        <p id="profile-error" class="form-error" role="alert"></p>
+        <div class="form-actions">
+          <button id="profile-cancel" class="button-secondary" type="button" hidden>Cancel</button>
+          <button id="profile-save" class="button-primary" type="submit">Save birth details</button>
+        </div>
+        <p class="form-privacy">Your birth information stays in this browser and is sent to the chart service only when you ask a question.</p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>

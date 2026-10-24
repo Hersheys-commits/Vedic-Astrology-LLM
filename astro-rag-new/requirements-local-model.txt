@@ -1,0 +1,7 @@
+# Optional dependencies for local Astro Qwen (Qwen3-4B + LoRA).
+# For CUDA acceleration, install the matching PyTorch build from pytorch.org first.
+torch>=2.6
+transformers>=4.51
+peft>=0.15
+accelerate>=1.6
+bitsandbytes>=0.50

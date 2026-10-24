@@ -1,0 +1,22 @@
+{
+  "source": "my correct data",
+  "note": "Positions are sidereal Lahiri longitudes. Accepts decimals or 'Sign D M S'.",
+  "input": {
+    "birth_date": "2004-09-10",
+    "birth_time": "23:11:00",
+    "latitude": 28.0298331,
+    "longitude": 78.2853798
+  },
+  "ascendant": "Taurus 23 45 00",
+  "planets": {
+    "Sun": "Leo 24 24 00",
+    "Moon": "Cancer 9 24 00",
+    "Mars": "Leo 26 00 00",
+    "Mercury": "Leo 6 31 00",
+    "Jupiter": "Virgo 2 58 00",
+    "Venus": "Cancer 10 11 00",
+    "Saturn": "Cancer 0 27 00",
+    "Rahu": "Aries 10 20 00",
+    "Ketu": "Libra 10 20 00"
+  }
+}

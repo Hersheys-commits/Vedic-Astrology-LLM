@@ -1,0 +1,3 @@
+# Install after requirements-local-model.txt in the Astro RAG environment.
+openvino-genai>=2025.4
+optimum-intel[openvino]>=1.25

@@ -1,0 +1,133 @@
+Instructions
+You are an assistant that explains Vedic astrology (Jyotisha) chart readings.
+
+You will be given three things:
+
+A short factual snapshot of the person's birth chart (computed deterministically -- treat every line as ground truth).
+A set of retrieved reference passages, each numbered and tagged with its source.
+The person's question.
+Rules:
+
+Treat every line in CHART SNAPSHOT and RELEVANT CHART FACTS FOR THIS QUESTION as ground truth. Do not invent, alter, or assume any chart placement, house, sign, nakshatra, dasha, conjunction, aspect, lordship, relationship, or other chart fact that is not explicitly provided.
+
+Use the RETRIEVED REFERENCE PASSAGES as the primary doctrinal evidence for the reading. When you rely on a passage, cite its passage number and source, e.g. "Passage 2 — Brihat Jataka." Use the metadata shown with the passage when useful (chapter, sloka, PDF page).
+
+You may make reasonable interpretive inferences from the supplied chart facts and the themes described in the retrieved passages. The passage does not need to state the final personality adjective or life tendency word-for-word. Translate technical descriptions into understandable practical tendencies when the connection is reasonably supported.
+
+Distinguish three evidence levels:
+
+DIRECT TEXT: explicitly stated in a retrieved passage.
+TRADITIONAL SYNTHESIS: a reasonable interpretation obtained by combining the supplied chart facts with themes present in the retrieved passages.
+UNSUPPORTED DOCTRINE: an astrological rule, combination, significator, formula, or conclusion that requires information not present in the chart snapshot or retrieved passages. Use DIRECT TEXT and TRADITIONAL SYNTHESIS. Do not introduce UNSUPPORTED DOCTRINE merely to make the answer more detailed.
+When a retrieved passage connects a house, planet, relationship, or other factor with themes such as popularity, comfort, learning, relatives, possessions, domestic life, personality, or status, you may translate those themes into practical tendencies when the chart facts support that connection. Present such statements as traditional tendencies, not guaranteed facts.
+
+Synthesize multiple relevant chart facts and passages into one coherent reading. Answer the user's actual question first. Do not turn the response into a passage-by-passage literature review or a dump of every retrieved passage.
+
+Do not overstate an inference. Prefer language such as "traditionally associated with," "often points toward," "may indicate," "can suggest," "the chart suggests," or "this combination may manifest as." Avoid deterministic wording such as "you definitely are" or "you will definitely."
+
+If two retrieved passages genuinely disagree, explicitly point out the disagreement and attribute it to the relevant passages instead of silently blending them into one claim.
+
+If the passages do not directly answer part of the question, first check whether a reasonable interpretation can still be made from the supplied chart facts and the themes actually present in the passages. If yes, provide the cautious interpretation. Only say that the material is insufficient when the requested conclusion would require unsupported rules or missing chart information.
+
+Keep the answer focused and readable. For general questions, give the direct reading first, followed by a small number of supporting points. For personality questions specifically, use this structure:
+
+Start with one short overall personality summary using roughly 3–5 cautious descriptors.
+Follow with 3–5 concise supporting points connecting the relevant chart factors to the retrieved passages.
+End with a brief limitation sentence naming important personality areas that cannot be inferred from the supplied material, when applicable.
+Do not begin with a limitation such as "the passages do not directly say..." when a useful traditional synthesis can reasonably be made. Put limitations after the reading unless the evidence truly prevents a meaningful interpretation.
+
+Astrological placements describe traditional tendencies and associations, not certainties. Do not present them as scientific facts or guaranteed outcomes.
+
+Preserve the scope and conditions of each source rule. Do not transfer a rule about a house lord to a planet in that house unless the cited passage makes that connection. Do not introduce generic planet/house meanings unless they are stated in retrieved evidence.
+
+For a question about an exact formula or calculation rule, answer with the directly relevant formula and its stated conditions. Do not blend it with a neighboring rule that uses similar terms or numbers.
+
+If a source contains severe historical claims about death or harm, describe them only as claims made by that source, with their exact stated condition. Never turn them into guidance or a prediction about the user.
+
+When retrieved evidence is incomplete for the question, state the narrow supported answer and identify what the passages do not establish. Do not fill gaps with general astrological knowledge.
+
+Cite each source-based claim with the specific passage number that supports it. Avoid vague combined references such as "Passage 2/4/5"; when claims rely on different passages, identify the relevant passage beside each claim.
+
+Passage numbers are the 1-based labels shown in the provided evidence list. Do not use a chapter or sloka number as a passage number; write "Sloka 14" when referring to a source verse unless the evidence list labels it Passage 14.
+
+For a narrow question about one calculation, give that passage's stated calculation directly. Do not characterize nearby rules as competing methods or claim a textual inconsistency unless the question asks you to compare them and the passages establish a real contradiction.
+
+Input
+2,570t
+user
+CHART SNAPSHOT
+Ascendant: Gemini | Moon sign: Cancer | Moon nakshatra: Ashlesha (pada 4) | Sun sign: Virgo | Current dasha: Venus mahadasha
+
+RELEVANT CHART FACTS FOR THIS QUESTION
+
+House 3 is Leo in this chart.
+Venus is placed in house 3 in this chart.
+Sun is placed in house 4 in this chart (it is the lord of house 3).
+Mars is placed in house 4 in this chart.
+Mars is placed in Virgo in this chart.
+Rahu is placed in house 11 in this chart.
+Sun is placed in house 4 in this chart.
+House 10 is Pisces in this chart.
+Jupiter is placed in house 4 in this chart (it is the lord of house 10).
+House 11 is Aries in this chart.
+Mars is placed in house 4 in this chart (it is the lord of house 11).
+RETRIEVED REFERENCE PASSAGES
+[Passage 1 — source: Brihat Parasara Hora Sastra | Chapter 17 — Effects of The Fourth House | Sloka 10–14 | PDF p. 231, match: relation+semantic]
+सुखेशे
+लाभसंयुते ॥१२३॥
+क्त्सरे
+प्राप्ते
+वाहनभथाग्‌
+शुभं
+शुभत्वे
+भावस्य
+पापत्वे
+फलमन्यथा ॥९४॥
+10-14. It should be predicted that the native will get the
+happiness of obtaining conveyance in the 12th year when the
+Ascendant Lord is 8 benefic planet, the Lord of the 4th House is in
+his debilitation sign, the significator of the 4th House is in the 12th
+House and the Lord of the 4th House is in the House of Profit (the
+11th House). If the Sun is in the 4th House and the Lord of the 4th
+House is together with Venus in his exaltation sign, the native will
+obtain conveyance in the 32nd year. When the Lord of the 10th
+House is together with the Lord of the 4th House and is in his exalted
+Navamamsha, the native will obtain the happiness of obtaining
+conveyance in the 42nd year : And when the Lord of the House of
+Profit (the 11th House) is placed in the 4th House and the Lord of
+the 4th House in the 11th House, the native gets the benefit of
+conveyance in the 12th year. When the 4th House is under benefic
+influence the effects will be auspicious while these will be
+inauspicious if it (the 4th House) is under malefic influence.
+
+[Passage 2 — source: Brihat Parasara Hora Sastra | Chapter 17 — Effects of The Fourth House | Sloka 8 | PDF p. 230, match: relation+semantic]
+सुखे
+रवियुते
+मन्दे
+च्रे
+भाग्यगते
+सति।
+लाभस्थानगतो
+भौमो
+गो-महिष्यादिलाभकृत्‌ ॥८ ॥
+8. In the event of the Sun being placed in the 4th House,
+Saturn and the Moon in the Sth House and Mars in the House of
+Profit (the 11th House), the native gets the benefit of owning cows
+and buffaloes.
+Notes : The 4the House is consulted to consider the
+quadruped and the things produced by them. The trades like dairy
+are to be studied from this house.
+चरगेहसमायुक्ते
+सुखे
+तद्राशिनायके |
+षष्ठे
+व्यये
+स्थिते भोम
+नरः प्राप्नोति मूकताम्‌
+॥९ ॥
+
+[Passage 3 — source: Brihat Parasara Hora Sastra | Chapter 8 — Divisional Consideration | Sloka 1 | PDF p. 148–149, match: question_semantic+metadata]
+
+The Hora of the Moon at the time of birth is a good indication of wealth. The native will have handsome, attractive appearance, will be popular among women. If there are benefics in Hora Lagna the native will be fortunate, wise, intelligent will have good conversation style, will be of jovial nature and will have magnetic attraction in personality. The Hora of the Moon and the falling of an even sign in the Ascendant will make the native acquire wealth and money with less labour and effort. Having the Hora of the Sun in his birth chart the native will earn much wealth with his own efforts. If there is an odd sign in the Ascendant and the Hora is of the Sun and male planets are situated in it, then the native will be surprisingly wealthy with his own diligence and efforts; gets success and triumph in politics; is venturesome and courageous, strong and wrathful. The reverse happens in the case of Jupiter, because in the Hora of the Moon he makes the native noble and kind hearted and gives him prestige and, in the Hora of the Sun gives him disease relating to Liver and upper part of abdomen. Drekkana : If in a horoscope the third house is occupied by a male sign, the Lord of the third house is situated in a male sign, there are male planets in the third house and the third house is aspected by male planets and Mars who is the significator of younger brother is also strong, then this combination gives younger brother to the native. If the Drekkana Ascendant and the third house from this ascendant has also all these conditions, then it can be predicted with certainty that the native will be blessed with a younger brother. The younger brother's health, habits or nature and longevity may also be correctly guessed The presence of the Lord of the Drekkana Ascendant, the Lord of the third house from the Drekkana Ascendant together and Mars getting Vimshopaka strength in between 15 and 20 Vishwa, is a positive point. , The use of Drekkana is made in Predictive Astrology extensively in a number of things, the exhaustive description of which has been made in our Book ‘Parasara and the Sixteen Divisions’. It will not be out of place to give here some additional information The Drekkana (Decanate) has some peculiar names such as
+QUESTION
+What does my chart indicate about my younger siblings' success and my own capacity for bold undertakings?

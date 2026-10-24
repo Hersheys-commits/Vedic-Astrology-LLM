@@ -1,0 +1,386 @@
+{
+  "previous_file": "npu-answers-20261023-231715(1).json",
+  "current_file": "npu-answers-20261024-104942.json",
+  "previous_rows": 40,
+  "current_rows": 40,
+  "matching_question_count": 40,
+  "question_sets_identical": true,
+  "exact_answer_matches": 0,
+  "answer_similarity": {
+    "method": "difflib.SequenceMatcher after whitespace normalization; not a correctness metric",
+    "mean": 0.1458,
+    "median": 0.1486,
+    "min": 0.0287,
+    "max": 0.255
+  },
+  "http_200_previous": 40,
+  "http_200_current": 40,
+  "completed_previous": 40,
+  "completed_current": 40,
+  "identical_chart_facts_used": 40,
+  "identical_retrieved_passages": 40,
+  "identical_chart_snapshots": 40,
+  "row_differences": [
+    {
+      "question": "Can I succeed in media, design, communications, or starting my own venture?",
+      "index_previous": 9,
+      "index_current": 9,
+      "answer_similarity": 0.1725,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Can you tell me the exact name initial of my future spouse from my 7th house?",
+      "index_previous": 40,
+      "index_current": 40,
+      "answer_similarity": 0.0821,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Could marriage or a business partnership lead me to move to another country?",
+      "index_previous": 4,
+      "index_current": 4,
+      "answer_similarity": 0.1508,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Do I have strong chances of traveling abroad or working with foreign organizations?",
+      "index_previous": 3,
+      "index_current": 3,
+      "answer_similarity": 0.1947,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart indicate a long life?",
+      "index_previous": 35,
+      "index_current": 35,
+      "answer_similarity": 0.1626,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart indicate difficulty or delay in having children?",
+      "index_previous": 18,
+      "index_current": 18,
+      "answer_similarity": 0.1485,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart indicate owning multiple properties?",
+      "index_previous": 21,
+      "index_current": 21,
+      "answer_similarity": 0.0676,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart indicate success in technology or engineering?",
+      "index_previous": 32,
+      "index_current": 32,
+      "answer_similarity": 0.0928,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart show financial comfort and support from people around me?",
+      "index_previous": 1,
+      "index_current": 1,
+      "answer_similarity": 0.2227,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart suggest I will marry someone from a different cultural or social background?",
+      "index_previous": 13,
+      "index_current": 13,
+      "answer_similarity": 0.0287,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Does my chart support success in business compared with a salaried career?",
+      "index_previous": 27,
+      "index_current": 27,
+      "answer_similarity": 0.1308,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "I have Ketu in my marriage house—does that mean my marriage will fail, or is it protected?",
+      "index_previous": 11,
+      "index_current": 11,
+      "answer_similarity": 0.1288,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "I heard a debilitated Mercury hurts education—does my chart mean I will struggle in studies?",
+      "index_previous": 6,
+      "index_current": 6,
+      "answer_similarity": 0.1607,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Is this a good time for a promotion or career advancement based on my running period?",
+      "index_previous": 8,
+      "index_current": 8,
+      "answer_similarity": 0.1148,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "People say Saturn in the wealth house ruins finances—will I be poor or can I build wealth?",
+      "index_previous": 2,
+      "index_current": 2,
+      "answer_similarity": 0.2142,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Should I drop out of college to start a YouTube channel based on my 3rd house?",
+      "index_previous": 38,
+      "index_current": 38,
+      "answer_similarity": 0.0767,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "What does my chart say about my relationship with my mother?",
+      "index_previous": 23,
+      "index_current": 23,
+      "answer_similarity": 0.0663,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "What kind of career is most suitable for me according to my chart?",
+      "index_previous": 29,
+      "index_current": 29,
+      "answer_similarity": 0.2332,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why do I experience financial ups and downs despite having a good income?",
+      "index_previous": 25,
+      "index_current": 25,
+      "answer_similarity": 0.2196,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why do I struggle to maintain long-term romantic relationships?",
+      "index_previous": 15,
+      "index_current": 15,
+      "answer_similarity": 0.124,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why do my friends always borrow money from me and never pay it back?",
+      "index_previous": 37,
+      "index_current": 37,
+      "answer_similarity": 0.0971,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why does my mother's health keep fluctuating according to my chart?",
+      "index_previous": 39,
+      "index_current": 39,
+      "answer_similarity": 0.063,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why have I gone through sudden career changes, and what kind of work actually fits me?",
+      "index_previous": 10,
+      "index_current": 10,
+      "answer_similarity": 0.1801,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Why is my current period considered so important for my career and professional growth?",
+      "index_previous": 7,
+      "index_current": 7,
+      "answer_similarity": 0.0899,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I become famous or widely recognized for my work?",
+      "index_previous": 28,
+      "index_current": 28,
+      "answer_similarity": 0.1619,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I become wealthy through my career or through inheritance?",
+      "index_previous": 24,
+      "index_current": 24,
+      "answer_similarity": 0.1255,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I change my career multiple times in life?",
+      "index_previous": 31,
+      "index_current": 31,
+      "answer_similarity": 0.2132,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I ever become extremely wealthy or a millionaire?",
+      "index_previous": 26,
+      "index_current": 26,
+      "answer_similarity": 0.1487,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I get a government job or work in the private sector?",
+      "index_previous": 30,
+      "index_current": 30,
+      "answer_similarity": 0.1096,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I have a son or daughter first?",
+      "index_previous": 17,
+      "index_current": 17,
+      "answer_similarity": 0.1224,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I have a stable and happy marriage despite Saturn being in my 7th house?",
+      "index_previous": 12,
+      "index_current": 12,
+      "answer_similarity": 0.09,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I have children, and what does my chart say about my relationship with them?",
+      "index_previous": 16,
+      "index_current": 16,
+      "answer_similarity": 0.1934,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I have opportunities to work abroad?",
+      "index_previous": 33,
+      "index_current": 33,
+      "answer_similarity": 0.1689,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I inherit property from my family, or will I buy a house on my own?",
+      "index_previous": 20,
+      "index_current": 20,
+      "answer_similarity": 0.1338,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I live comfortably in my own house or face domestic instability?",
+      "index_previous": 22,
+      "index_current": 22,
+      "answer_similarity": 0.1709,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I live past 85 years old according to my 8th house?",
+      "index_previous": 36,
+      "index_current": 36,
+      "answer_similarity": 0.1499,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I settle permanently in a foreign country?",
+      "index_previous": 34,
+      "index_current": 34,
+      "answer_similarity": 0.1441,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will I succeed in competitive entrance exams and higher education?",
+      "index_previous": 5,
+      "index_current": 5,
+      "answer_similarity": 0.255,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will my children be successful in life?",
+      "index_previous": 19,
+      "index_current": 19,
+      "answer_similarity": 0.2356,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    },
+    {
+      "question": "Will my spouse be financially successful and supportive?",
+      "index_previous": 14,
+      "index_current": 14,
+      "answer_similarity": 0.1878,
+      "chart_facts_same": true,
+      "retrieval_same": true,
+      "answer_exact_match": false
+    }
+  ],
+  "caveat": "If effective prompt and model/export fingerprints are not recorded in both runs, answer divergence cannot be attributed solely to sampling or model nondeterminism."
+}

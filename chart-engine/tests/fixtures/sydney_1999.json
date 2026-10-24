@@ -1,0 +1,81 @@
+{
+  "input": {
+    "birth_date": "1999-12-25",
+    "birth_time": "23:45",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "timezone": null
+  },
+  "expected": {
+    "utc_datetime": "1999-12-25T12:45:00Z",
+    "julian_day_ut": 2451538.031254177,
+    "ascendant_sign": "Leo",
+    "ascendant_longitude": 135.00599,
+    "planets": {
+      "Sun": {
+        "longitude": 249.414842,
+        "sign": "Sagittarius",
+        "house": 5,
+        "nakshatra": "Mula",
+        "pada": 3
+      },
+      "Moon": {
+        "longitude": 108.499154,
+        "sign": "Cancer",
+        "house": 12,
+        "nakshatra": "Ashlesha",
+        "pada": 1
+      },
+      "Mars": {
+        "longitude": 298.706108,
+        "sign": "Capricorn",
+        "house": 6,
+        "nakshatra": "Dhanishta",
+        "pada": 2
+      },
+      "Mercury": {
+        "longitude": 237.313826,
+        "sign": "Scorpio",
+        "house": 4,
+        "nakshatra": "Jyeshtha",
+        "pada": 4
+      },
+      "Jupiter": {
+        "longitude": 1.198583,
+        "sign": "Aries",
+        "house": 9,
+        "nakshatra": "Ashwini",
+        "pada": 1
+      },
+      "Venus": {
+        "longitude": 209.317607,
+        "sign": "Libra",
+        "house": 3,
+        "nakshatra": "Vishakha",
+        "pada": 3
+      },
+      "Saturn": {
+        "longitude": 16.725103,
+        "sign": "Aries",
+        "house": 9,
+        "nakshatra": "Bharani",
+        "pada": 2
+      },
+      "Rahu": {
+        "longitude": 101.556711,
+        "sign": "Cancer",
+        "house": 12,
+        "nakshatra": "Pushya",
+        "pada": 3
+      },
+      "Ketu": {
+        "longitude": 281.556711,
+        "sign": "Capricorn",
+        "house": 6,
+        "nakshatra": "Shravana",
+        "pada": 1
+      }
+    },
+    "birth_mahadasha": "Mercury"
+  }
+}

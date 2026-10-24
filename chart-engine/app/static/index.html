@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vedic Chart Engine — test console</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root {
+    --bg: #12100e;
+    --panel: #1b1815;
+    --line: #322c26;
+    --text: #efe8de;
+    --muted: #9c9186;
+    --accent: #d99a4e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+  }
+  header { padding: 18px 24px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: .01em; }
+  header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  .wrap { display: grid; grid-template-columns: 380px 1fr; min-height: calc(100vh - 70px); }
+  @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; } }
+  .panel { padding: 20px 24px; border-right: 1px solid var(--line); }
+  label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .06em;
+          color: var(--muted); margin: 16px 0 6px; }
+  input, select, button {
+    width: 100%; padding: 9px 11px; background: var(--panel); color: var(--text);
+    border: 1px solid var(--line); border-radius: 6px; font: inherit;
+  }
+  button { background: var(--accent); color: #17130e; border: none; font-weight: 600; cursor: pointer; margin-top: 18px; }
+  button:hover { filter: brightness(1.08); }
+  button.secondary { background: var(--panel); color: var(--text); border: 1px solid var(--line); font-weight: 500; margin-top: 8px; }
+  #map { height: 320px; border-radius: 8px; margin-top: 10px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .results { padding: 20px 24px; overflow: auto; }
+  .chip { display: inline-block; padding: 3px 8px; border: 1px solid var(--line);
+          border-radius: 999px; font-size: 12px; color: var(--muted); margin: 2px 4px 2px 0; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  pre { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        padding: 14px; overflow: auto; max-height: 420px; font-size: 12.5px; }
+  .err { color: #e08a7a; }
+  .geo-result { padding: 8px; border: 1px solid var(--line); border-radius: 6px;
+                margin-top: 6px; cursor: pointer; font-size: 13px; }
+  .geo-result:hover { border-color: var(--accent); }
+  h2 { font-size: 15px; margin: 24px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Vedic Chart Engine — test console</h1>
+  <p>Deterministic layer only. No interpretation is produced here.</p>
+</header>
+
+<div class="wrap">
+  <div class="panel">
+    <label for="date">Birth date</label>
+    <input type="date" id="date" value="2004-05-17" />
+
+    <label for="time">Birth time (local civil time)</label>
+    <input type="time" id="time" step="1" value="14:35:00" />
+
+    <label for="search">Search a place</label>
+    <div class="row">
+      <input type="text" id="search" placeholder="MNNIT Prayagraj" />
+      <button class="secondary" style="margin-top:0" onclick="doGeocode()">Search</button>
+    </div>
+    <div id="geo"></div>
+
+    <label>Or click the map</label>
+    <div id="map"></div>
+
+    <div class="row">
+      <div><label for="lat">Latitude</label><input id="lat" value="25.4358" /></div>
+      <div><label for="lon">Longitude</label><input id="lon" value="81.8463" /></div>
+    </div>
+
+    <label for="ayanamsa">Ayanamsa</label>
+    <select id="ayanamsa">
+      <option value="lahiri">Lahiri (Chitrapaksha)</option>
+      <option value="raman">B.V. Raman</option>
+      <option value="krishnamurti">Krishnamurti (KP)</option>
+      <option value="yukteshwar">Yukteshwar</option>
+    </select>
+
+    <label for="node">Node type</label>
+    <select id="node"><option value="mean">Mean</option><option value="true">True</option></select>
+
+    <button onclick="generate()">Generate chart</button>
+  </div>
+
+  <div class="results" id="out">
+    <p style="color:var(--muted)">Pick a date, time and location, then generate a chart.</p>
+  </div>
+</div>
+
+<script>
+const map = L.map('map').setView([25.4358, 81.8463], 6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors', maxZoom: 18
+}).addTo(map);
+let marker = L.marker([25.4358, 81.8463]).addTo(map);
+let placeName = "Prayagraj, Uttar Pradesh, India";
+let locationMode = "map_click";
+
+map.on('click', e => {
+  document.getElementById('lat').value = e.latlng.lat.toFixed(6);
+  document.getElementById('lon').value = e.latlng.lng.toFixed(6);
+  marker.setLatLng(e.latlng);
+  placeName = null;
+  locationMode = "map_click";
+});
+
+async function doGeocode() {
+  const q = document.getElementById('search').value.trim();
+  const box = document.getElementById('geo');
+  if (!q) return;
+  box.innerHTML = '<p style="color:var(--muted);font-size:13px">Searching…</p>';
+  try {
+    const r = await fetch('/location/geocode', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({query: q, limit: 5})
+    });
+    const data = await r.json();
+    if (data.error) { box.innerHTML = '<p class="err">' + data.error.message + '</p>'; return; }
+    box.innerHTML = data.results.map((res, i) =>
+      `<div class="geo-result" onclick="pick(${i})">${res.display_name}</div>`).join('');
+    window._geo = data.results;
+  } catch (e) { box.innerHTML = '<p class="err">' + e + '</p>'; }
+}
+
+function pick(i) {
+  const res = window._geo[i];
+  document.getElementById('lat').value = res.latitude;
+  document.getElementById('lon').value = res.longitude;
+  placeName = res.display_name;
+  locationMode = "geocoded";
+  marker.setLatLng([res.latitude, res.longitude]);
+  map.setView([res.latitude, res.longitude], 11);
+  document.getElementById('geo').innerHTML =
+    '<p style="color:var(--muted);font-size:13px">Selected: ' + res.display_name + '</p>';
+}
+
+async function generate() {
+  const out = document.getElementById('out');
+  out.innerHTML = '<p style="color:var(--muted)">Computing…</p>';
+  const body = {
+    birth_date: document.getElementById('date').value,
+    birth_time: document.getElementById('time').value || "00:00:00",
+    location: {
+      mode: locationMode,
+      latitude: parseFloat(document.getElementById('lat').value),
+      longitude: parseFloat(document.getElementById('lon').value),
+      display_name: placeName
+    },
+    settings: {
+      ayanamsa: document.getElementById('ayanamsa').value,
+      node_type: document.getElementById('node').value,
+      include_antardasha: true
+    }
+  };
+  try {
+    const r = await fetch('/chart', {
+      method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)
+    });
+    const chart = await r.json();
+    if (chart.error) {
+      out.innerHTML = '<p class="err"><strong>' + chart.error.code + '</strong><br/>' + chart.error.message + '</p>';
+      return;
+    }
+    render(chart);
+  } catch (e) { out.innerHTML = '<p class="err">' + e + '</p>'; }
+}
+
+function render(c) {
+  const s = c.chart_summary, t = c.time;
+  const rows = c.planets.map(p => `<tr>
+    <td>${p.body}</td>
+    <td>${p.position.zodiac_sign} ${p.position.formatted_degree}</td>
+    <td>${p.placement.house}</td>
+    <td>${p.nakshatra.name} (${p.nakshatra.pada})</td>
+    <td>${p.motion.retrograde ? 'R' : ''} ${p.dignity.status !== 'neutral' ? p.dignity.status : ''}</td>
+  </tr>`).join('');
+  const houses = c.houses.map(h => `<tr>
+    <td>${h.number}</td><td>${h.sign}</td><td>${h.lord}</td>
+    <td>${h.occupants.join(', ') || '—'}</td></tr>`).join('');
+  const dasha = c.dashas.vimshottari.mahadasha.slice(0, 9).map(d =>
+    `<tr><td>${d.lord}</td><td>${d.start}</td><td>${d.end}</td></tr>`).join('');
+
+  document.getElementById('out').innerHTML = `
+    <div>
+      <span class="chip">${t.timezone.iana} ${t.timezone.utc_offset}</span>
+      <span class="chip">UTC ${t.utc_datetime}</span>
+      <span class="chip">JD ${t.julian_day_ut}</span>
+      <span class="chip">ayanamsa ${c.calculation_settings.ayanamsa_value_degrees.toFixed(4)}°</span>
+      <span class="chip">validation: ${c.validation.status}</span>
+    </div>
+    <h2>Lagna ${s.ascendant_sign} · Moon ${s.moon_sign} (${s.moon_nakshatra}) · Sun ${s.sun_sign}</h2>
+    <table><thead><tr><th>Body</th><th>Position</th><th>House</th><th>Nakshatra</th><th>State</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    <h2>Houses</h2>
+    <table><thead><tr><th>#</th><th>Sign</th><th>Lord</th><th>Occupants</th></tr></thead>
+      <tbody>${houses}</tbody></table>
+    <h2>Vimshottari mahadasha</h2>
+    <table><thead><tr><th>Lord</th><th>Start</th><th>End</th></tr></thead><tbody>${dasha}</tbody></table>
+    <h2>Chart JSON</h2>
+    <pre>${JSON.stringify(c, null, 2)}</pre>`;
+}
+</script>
+</body>
+</html>

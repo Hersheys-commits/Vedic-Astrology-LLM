@@ -1,0 +1,2753 @@
+{
+  "strategy": "hybrid",
+  "overall": {
+    "hit@1": 0.55,
+    "precision@1": 0.55,
+    "recall@1": 0.2938,
+    "hit@3": 0.775,
+    "precision@3": 0.4292,
+    "recall@3": 0.5667,
+    "hit@5": 0.85,
+    "precision@5": 0.34,
+    "recall@5": 0.7083,
+    "n_queries": 80
+  },
+  "by_category": {
+    "aspect": {
+      "hit@1": 1.0,
+      "precision@1": 1.0,
+      "recall@1": 0.6111,
+      "hit@3": 1.0,
+      "precision@3": 0.6667,
+      "recall@3": 1.0,
+      "hit@5": 1.0,
+      "precision@5": 0.4,
+      "recall@5": 1.0,
+      "n_queries": 3
+    },
+    "dasha": {
+      "hit@1": 0.0,
+      "precision@1": 0.0,
+      "recall@1": 0.0,
+      "hit@3": 0.0,
+      "precision@3": 0.0,
+      "recall@3": 0.0,
+      "hit@5": 0.0,
+      "precision@5": 0.0,
+      "recall@5": 0.0,
+      "n_queries": 9
+    },
+    "nakshatra": {
+      "hit@1": 0.5385,
+      "precision@1": 0.5385,
+      "recall@1": 0.4103,
+      "hit@3": 0.9231,
+      "precision@3": 0.3846,
+      "recall@3": 0.7436,
+      "hit@5": 0.9231,
+      "precision@5": 0.2615,
+      "recall@5": 0.8205,
+      "n_queries": 13
+    },
+    "planet_house": {
+      "hit@1": 0.6182,
+      "precision@1": 0.6182,
+      "recall@1": 0.297,
+      "hit@3": 0.8545,
+      "precision@3": 0.497,
+      "recall@3": 0.5939,
+      "hit@5": 0.9636,
+      "precision@5": 0.4109,
+      "recall@5": 0.7818,
+      "n_queries": 55
+    }
+  },
+  "queries": [
+    {
+      "id": "corpus_smoke_001",
+      "category": "aspect",
+      "query": "What is the 4th aspect of Mars?",
+      "expected_chunks": [
+        "bphs_ch19_sl006",
+        "bphs_ch19_sl006_note_01",
+        "bphs_ch19_sl006_note_02"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch19_sl006",
+        "bphs_ch19_sl006_note_02",
+        "bphs_ch19_sl006_note_01",
+        "bphs_ch17_sl010_014",
+        "bphs_ch20_sl042"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_002",
+      "category": "aspect",
+      "query": "What is the 7th aspect of Moon?",
+      "expected_chunks": [
+        "bphs_ch39_sl002_004"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch39_sl002_004",
+        "bphs_ch39_overview",
+        "phaladeepika_ch10_overview",
+        "phaladeepika_ch10_sl003",
+        "bphs_ch18_sl016"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_003",
+      "category": "aspect",
+      "query": "What is the 7th aspect of Venus?",
+      "expected_chunks": [
+        "brihat_jataka_ch24_sl007",
+        "brihat_jataka_ch24_sl007_note_01"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch24_sl007",
+        "brihat_jataka_ch24_sl007_note_01",
+        "phaladeepika_ch10_overview",
+        "bphs_ch41_sl029_031",
+        "phaladeepika_ch10_sl003"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_004",
+      "category": "dasha",
+      "query": "What does Jupiter Mahadasha indicate?",
+      "expected_chunks": [
+        "brihat_jataka_ch08_sl016",
+        "jataka_parijata_ch18_sl022",
+        "jataka_parijata_ch18_sl120"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch08_sl023_2",
+        "bphs_ch36_sl025_026",
+        "bphs_ch36_sl039_040",
+        "bphs_ch38_sl004",
+        "jataka_parijata_ch13_sl050"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_005",
+      "category": "dasha",
+      "query": "What does Ketu Mahadasha indicate?",
+      "expected_chunks": [
+        "jataka_parijata_ch18_sl145_2",
+        "jataka_parijata_ch18_sl147",
+        "jataka_parijata_ch18_sl155"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch11_sl081",
+        "bphs_ch46_sl022_024",
+        "phaladeepika_ch21_sl066",
+        "jataka_parijata_ch18_sl148",
+        "phaladeepika_ch20_sl053"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_006",
+      "category": "dasha",
+      "query": "What does Mars Mahadasha indicate?",
+      "expected_chunks": [
+        "brihat_jataka_ch08_sl014",
+        "jataka_parijata_ch12_sl002",
+        "jataka_parijata_ch12_sl025"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch36_sl039_040",
+        "phaladeepika_ch16_sl021",
+        "brihat_jataka_ch08_sl023_2",
+        "bphs_ch36_sl025_026",
+        "jataka_parijata_ch16_sl024"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_007",
+      "category": "dasha",
+      "query": "What does Mercury Mahadasha indicate?",
+      "expected_chunks": [
+        "brihat_jataka_ch08_sl015",
+        "jataka_parijata_ch18_sl134",
+        "jataka_parijata_ch18_sl136"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch36_sl039_040",
+        "bphs_ch36_sl004_3",
+        "bphs_ch38_sl004",
+        "bphs_ch03_sl020",
+        "jataka_parijata_ch18_sl143"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_008",
+      "category": "dasha",
+      "query": "What does Moon Mahadasha indicate?",
+      "expected_chunks": [
+        "bphs_ch46_sl015_021",
+        "brihat_jataka_ch08_sl010",
+        "brihat_jataka_ch12_sl010"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch06_sl005",
+        "bphs_ch36_sl039_040",
+        "jataka_parijata_ch18_sl007",
+        "brihat_jataka_ch08_sl001",
+        "jataka_parijata_ch18_sl033"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_009",
+      "category": "dasha",
+      "query": "What does Rahu Mahadasha indicate?",
+      "expected_chunks": [
+        "jataka_parijata_ch13_sl013",
+        "jataka_parijata_ch14_sl055",
+        "phaladeepika_ch19_sl015"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch19_sl016",
+        "jataka_parijata_ch18_sl105",
+        "bphs_ch46_sl022_024",
+        "jataka_parijata_ch11_sl081",
+        "phaladeepika_ch21_sl031"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_010",
+      "category": "dasha",
+      "query": "What does Saturn Mahadasha indicate?",
+      "expected_chunks": [
+        "brihat_jataka_ch08_sl018",
+        "jataka_parijata_ch18_sl042",
+        "jataka_parijata_ch18_sl121"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch36_sl004_3",
+        "jataka_parijata_ch14_sl060",
+        "bphs_ch36_sl039_040",
+        "phaladeepika_ch13_sl018",
+        "bphs_ch03_sl006"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_011",
+      "category": "dasha",
+      "query": "What does Sun Mahadasha indicate?",
+      "expected_chunks": [
+        "jataka_parijata_ch11_sl053",
+        "jataka_parijata_ch17_sl109",
+        "jataka_parijata_ch18_sl070"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch16_sl021",
+        "brihat_jataka_ch08_sl001_2",
+        "jataka_parijata_ch14_sl060",
+        "bphs_ch03_sl006",
+        "brihat_jataka_ch08_sl012"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_012",
+      "category": "dasha",
+      "query": "What does Venus Mahadasha indicate?",
+      "expected_chunks": [
+        "brihat_jataka_ch08_sl017",
+        "jataka_parijata_ch18_sl166",
+        "jataka_parijata_ch18_sl169"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch23_sl002",
+        "bphs_ch36_sl039_040",
+        "bphs_ch36_sl004_3",
+        "phaladeepika_ch21_sl074",
+        "jataka_parijata_ch18_sl187"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_013",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Anuradha nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl009"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch17_sl105",
+        "brihat_jataka_ch16_sl009",
+        "phaladeepika_ch26_sl026",
+        "brihat_jataka_ch16_overview",
+        "bphs_ch03_overview"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_014",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Ardra nakshatra?",
+      "expected_chunks": [
+        "bphs_ch07_sl033_041",
+        "bphs_ch07_sl036",
+        "bphs_ch07_sl036_note_01"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch17_sl105",
+        "brihat_jataka_ch16_overview",
+        "phaladeepika_ch22_sl007",
+        "brihat_jataka_ch16_sl002",
+        "phaladeepika_ch26_sl048_4"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_015",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Ashwini nakshatra?",
+      "expected_chunks": [
+        "bphs_ch07_sl001_2",
+        "bphs_ch07_sl012",
+        "bphs_ch07_sl012_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch47_sl001_2",
+        "bphs_ch47_sl004_2",
+        "bphs_ch07_sl001_2",
+        "bphs_ch07_sl024_026",
+        "bphs_ch11_sl001_3"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_016",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Bharani nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl001",
+        "phaladeepika_ch22_sl006"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch22_sl006",
+        "brihat_jataka_ch16_sl001",
+        "phaladeepika_ch22_sl007",
+        "phaladeepika_ch13_sl008",
+        "phaladeepika_ch26_sl048_3"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_017",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Chitra nakshatra?",
+      "expected_chunks": [
+        "phaladeepika_ch13_sl008"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch16_sl008",
+        "brihat_jataka_ch26_sl005",
+        "phaladeepika_ch13_sl008",
+        "jataka_parijata_ch16_sl040",
+        "bphs_ch03_overview"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_018",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Hasta nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl007"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch16_sl007",
+        "jataka_parijata_ch17_sl103",
+        "jataka_parijata_ch17_sl006",
+        "phaladeepika_ch26_sl048_4",
+        "phaladeepika_ch13_sl008"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_019",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Krittika nakshatra?",
+      "expected_chunks": [
+        "jataka_parijata_ch18_sl002",
+        "phaladeepika_ch19_sl002"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch26_sl026",
+        "phaladeepika_ch19_sl002",
+        "phaladeepika_ch26_sl048_3",
+        "brihat_jataka_ch16_sl002",
+        "jataka_parijata_ch18_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.5
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_020",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Magha nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl006"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch16_sl006",
+        "bphs_ch11_sl001_3",
+        "bphs_ch03_overview",
+        "brihat_jataka_ch26_sl010_2",
+        "jataka_parijata_ch17_sl109"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_021",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Mula nakshatra?",
+      "expected_chunks": [
+        "phaladeepika_ch01_sl009",
+        "phaladeepika_ch26_sl048_2",
+        "phaladeepika_ch26_sl048_2_note_01"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch17_sl006",
+        "phaladeepika_ch01_sl009",
+        "phaladeepika_ch26_sl048_2_note_01",
+        "brihat_jataka_ch16_overview",
+        "brihat_jataka_ch26_sl010_2"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_022",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Punarvasu nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl004"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch16_sl004",
+        "jataka_parijata_ch17_sl103",
+        "phaladeepika_ch26_sl026",
+        "jataka_parijata_ch17_sl006",
+        "bphs_ch03_overview"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_023",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Pushya nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch16_sl005",
+        "phaladeepika_ch13_sl008"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch16_sl005",
+        "jataka_parijata_ch17_sl103",
+        "phaladeepika_ch26_sl026",
+        "phaladeepika_ch11_sl008",
+        "phaladeepika_ch13_sl008"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.5
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_024",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Revati nakshatra?",
+      "expected_chunks": [
+        "brihat_jataka_ch26_sl010_2"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch26_sl010_2",
+        "phaladeepika_ch26_sl048_3",
+        "bphs_ch03_overview",
+        "brihat_jataka_ch16_overview",
+        "jataka_parijata_ch17_sl109"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_025",
+      "category": "nakshatra",
+      "query": "What are the traditional indications of Rohini nakshatra?",
+      "expected_chunks": [
+        "jataka_parijata_ch17_sl104",
+        "phaladeepika_ch22_sl001",
+        "phaladeepika_ch22_sl008"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch22_sl008",
+        "phaladeepika_ch22_sl007",
+        "jataka_parijata_ch17_sl104",
+        "phaladeepika_ch26_sl026",
+        "brihat_jataka_ch16_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_026",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 1th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl042",
+        "brihat_jataka_ch04_sl010",
+        "brihat_jataka_ch06_sl010"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch08_sl023_2",
+        "bphs_ch11_sl042",
+        "jataka_parijata_ch10_sl066",
+        "brihat_jataka_ch06_sl010",
+        "brihat_jataka_ch11_sl008"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_027",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 10th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl016"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl016",
+        "bphs_ch23_sl018",
+        "bphs_ch23_sl007",
+        "bphs_ch18_sl024_032",
+        "bphs_ch22_overview"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_028",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 11th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl007_011",
+        "bphs_ch15_sl009",
+        "bphs_ch24_sl006"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch24_overview",
+        "bphs_ch26_sl011",
+        "bphs_ch36_sl001_4",
+        "bphs_ch11_sl007_011",
+        "bphs_ch15_sl009"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_029",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 12th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch16_sl007_011",
+        "bphs_ch16_sl007_011_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch38_sl004",
+        "bphs_ch38_overview",
+        "bphs_ch10_sl014_025",
+        "phaladeepika_ch08_sl016",
+        "brihat_jataka_ch07_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_030",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 2th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl031",
+        "bphs_ch15_sl003",
+        "bphs_ch15_sl005"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl024_032",
+        "jataka_parijata_ch14_sl101",
+        "bphs_ch38_sl004",
+        "phaladeepika_ch08_sl014",
+        "bphs_ch15_sl003"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_031",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 3th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch11_sl031",
+        "bphs_ch16_sl007_011"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch10_sl014_025",
+        "phaladeepika_ch08_sl014",
+        "bphs_ch11_sl031",
+        "bphs_ch36_sl004_3",
+        "bphs_ch16_sl007_011"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_032",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 4th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl042",
+        "bphs_ch18_sl015",
+        "bphs_ch26_sl015"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl015",
+        "bphs_ch18_sl015",
+        "bphs_ch33_sl001",
+        "bphs_ch36_sl016",
+        "bphs_ch11_sl042"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_033",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 5th house?",
+      "expected_chunks": [
+        "bphs_ch18_sl016",
+        "bphs_ch18_sl018",
+        "bphs_ch18_sl021"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl024_032",
+        "bphs_ch18_sl016",
+        "bphs_ch26_sl005",
+        "bphs_ch18_sl018",
+        "bphs_ch18_sl021"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_034",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 6th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl042",
+        "bphs_ch19_sl006",
+        "bphs_ch19_sl006_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch19_sl006_note_01",
+        "bphs_ch19_sl027",
+        "bphs_ch11_sl042",
+        "bphs_ch19_sl006",
+        "phaladeepika_ch08_sl015"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_035",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 7th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch22_sl007",
+        "bphs_ch22_sl029"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl103",
+        "bphs_ch22_sl029",
+        "jataka_parijata_ch14_sl015",
+        "bphs_ch35_sl047_048",
+        "bphs_ch10_sl014_025"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_036",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 8th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch18_sl015",
+        "phaladeepika_ch08_sl015"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl015",
+        "bphs_ch10_sl014_025",
+        "phaladeepika_ch08_sl015",
+        "bphs_ch21_sl003",
+        "bphs_ch19_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_037",
+      "category": "planet_house",
+      "query": "What is the effect of Jupiter in the 9th house?",
+      "expected_chunks": [
+        "bphs_ch22_sl005",
+        "bphs_ch26_sl093",
+        "bphs_ch26_sl117"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch22_overview",
+        "bphs_ch26_sl117",
+        "bphs_ch26_sl093",
+        "bphs_ch22_sl005",
+        "bphs_ch41_sl039"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_038",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 1th house?",
+      "expected_chunks": [
+        "jataka_parijata_ch11_sl081"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch11_sl081",
+        "phaladeepika_ch08_sl031",
+        "phaladeepika_ch08_sl028",
+        "bphs_ch31_overview",
+        "bphs_ch31_sl023"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_039",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 10th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl031",
+        "phaladeepika_ch16_sl028"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch16_sl028",
+        "phaladeepika_ch08_sl031",
+        "bphs_ch26_sl058",
+        "phaladeepika_ch03_sl005_3",
+        "bphs_ch26_sl113"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_040",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 12th house?",
+      "expected_chunks": [
+        "bphs_ch03_sl056",
+        "bphs_ch03_sl056_note_01",
+        "bphs_ch35_sl063_074"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch35_sl063_074",
+        "phaladeepika_ch08_sl031",
+        "jataka_parijata_ch15_sl083",
+        "bphs_ch03_sl056",
+        "bphs_ch03_sl056_note_01"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_041",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 2th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl028"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl028",
+        "bphs_ch31_overview",
+        "bphs_ch44_overview",
+        "bphs_ch32_sl017",
+        "bphs_ch11_sl030"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_042",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 3th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl029"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl029",
+        "bphs_ch31_overview",
+        "bphs_ch33_overview",
+        "bphs_ch03_sl006_note_01",
+        "bphs_ch33_sl001"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_043",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 4th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl029"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl029",
+        "bphs_ch36_sl016",
+        "bphs_ch18_overview",
+        "bphs_ch19_overview",
+        "bphs_ch35_sl033_035"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_044",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 5th house?",
+      "expected_chunks": [
+        "bphs_ch18_sl005",
+        "bphs_ch18_sl007",
+        "bphs_ch33_sl001"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl005",
+        "bphs_ch18_sl007",
+        "bphs_ch18_overview",
+        "bphs_ch33_sl001",
+        "bphs_ch47_sl008_010"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_045",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 6th house?",
+      "expected_chunks": [
+        "jataka_parijata_ch11_sl081"
+      ],
+      "retrieved_chunks": [
+        "jataka_parijata_ch11_sl081",
+        "bphs_ch19_overview",
+        "bphs_ch19_sl002",
+        "bphs_ch19_sl006_note_01",
+        "bphs_ch18_overview"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_046",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 7th house?",
+      "expected_chunks": [
+        "bphs_ch20_sl006",
+        "bphs_ch20_sl006_note_01",
+        "bphs_ch46_sl022_024"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch20_sl006",
+        "bphs_ch20_overview",
+        "phaladeepika_ch08_sl031",
+        "bphs_ch46_sl022_024",
+        "bphs_ch20_sl006_note_01"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_047",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 8th house?",
+      "expected_chunks": [
+        "bphs_ch44_sl004",
+        "jataka_parijata_ch15_sl082",
+        "phaladeepika_ch08_sl031"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl031",
+        "bphs_ch44_sl004",
+        "jataka_parijata_ch15_sl082",
+        "bphs_ch44_overview",
+        "bphs_ch19_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_048",
+      "category": "planet_house",
+      "query": "What is the effect of Ketu in the 9th house?",
+      "expected_chunks": [
+        "phaladeepika_ch08_sl031"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl031",
+        "bphs_ch18_sl007",
+        "bphs_ch18_overview",
+        "bphs_ch44_overview",
+        "brihat_jataka_ch11_sl016"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_049",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 1th house?",
+      "expected_chunks": [
+        "bphs_ch31_sl020",
+        "brihat_jataka_ch04_sl007",
+        "brihat_jataka_ch04_sl012"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch25_sl008",
+        "bphs_ch31_sl020",
+        "brihat_jataka_ch23_sl017",
+        "phaladeepika_ch07_sl024",
+        "brihat_jataka_ch08_sl023_2"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_050",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 10th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch11_sl038",
+        "brihat_jataka_ch23_sl017"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch16_sl028",
+        "bphs_ch10_sl014_025",
+        "brihat_jataka_ch23_sl017",
+        "bphs_ch11_sl038",
+        "phaladeepika_ch08_sl010"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_051",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 11th house?",
+      "expected_chunks": [
+        "bphs_ch15_sl008",
+        "bphs_ch17_sl008",
+        "bphs_ch23_sl011"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch43_sl002",
+        "bphs_ch17_sl008",
+        "bphs_ch23_sl011",
+        "bphs_ch15_sl008",
+        "bphs_ch43_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_052",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 12th house?",
+      "expected_chunks": [
+        "bphs_ch16_sl007_011",
+        "bphs_ch16_sl007_011_note_01",
+        "bphs_ch16_sl007_011_note_02"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch31_sl020",
+        "bphs_ch38_sl004",
+        "bphs_ch20_sl042",
+        "bphs_ch25_overview",
+        "bphs_ch25_sl013"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_053",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 2th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch15_sl003",
+        "bphs_ch18_sl024_032"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch15_sl003",
+        "bphs_ch10_sl014_025",
+        "bphs_ch18_sl024_032",
+        "brihat_jataka_ch20_sl006_2",
+        "phaladeepika_ch07_sl024"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_054",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 3th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch16_sl002",
+        "bphs_ch16_sl007_011"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch16_sl002",
+        "bphs_ch16_sl007_011",
+        "bphs_ch10_sl014_025",
+        "bphs_ch16_overview",
+        "phaladeepika_ch08_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_055",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 4th house?",
+      "expected_chunks": [
+        "bphs_ch18_sl004",
+        "bphs_ch19_sl006",
+        "bphs_ch19_sl006_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch19_sl006",
+        "phaladeepika_ch16_sl001_2",
+        "bphs_ch18_sl004",
+        "brihat_jataka_ch25_sl005",
+        "brihat_jataka_ch04_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_056",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 5th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl002",
+        "bphs_ch35_sl085_086",
+        "bphs_ch36_sl004_3"
+      ],
+      "retrieved_chunks": [
+        "brihat_jataka_ch23_sl001_2",
+        "bphs_ch43_sl002",
+        "phaladeepika_ch08_sl009",
+        "phaladeepika_ch12_sl004",
+        "bphs_ch11_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_057",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 6th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl034",
+        "bphs_ch18_sl004",
+        "bphs_ch19_sl006"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl006",
+        "bphs_ch26_sl042",
+        "bphs_ch20_sl042",
+        "bphs_ch19_sl006",
+        "bphs_ch18_sl004"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_058",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 7th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch11_sl007_011",
+        "bphs_ch11_sl039"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch20_sl006",
+        "bphs_ch26_sl091",
+        "bphs_ch20_sl042",
+        "phaladeepika_ch10_sl003",
+        "bphs_ch20_sl019_021"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_059",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 8th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl002",
+        "bphs_ch16_sl003",
+        "bphs_ch19_sl006"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch21_sl002",
+        "bphs_ch21_overview",
+        "bphs_ch20_sl042",
+        "bphs_ch16_sl003",
+        "bphs_ch11_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_060",
+      "category": "planet_house",
+      "query": "What is the effect of Mars in the 9th house?",
+      "expected_chunks": [
+        "bphs_ch03_sl055",
+        "bphs_ch22_sl012",
+        "jataka_parijata_ch14_sl088"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch22_sl012",
+        "jataka_parijata_ch14_sl088",
+        "phaladeepika_ch16_sl021",
+        "phaladeepika_ch08_sl010",
+        "bphs_ch03_sl055"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_061",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 1th house?",
+      "expected_chunks": [
+        "bphs_ch17_sl005",
+        "bphs_ch31_sl030_037",
+        "brihat_jataka_ch01_sl019"
+      ],
+      "retrieved_chunks": [
+        "phaladeepika_ch08_sl013",
+        "bphs_ch17_sl005",
+        "phaladeepika_ch07_sl024",
+        "bphs_ch31_sl030_037",
+        "jataka_parijata_ch11_sl001"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_062",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 10th house?",
+      "expected_chunks": [
+        "bphs_ch26_sl010",
+        "brihat_jataka_ch11_sl011",
+        "phaladeepika_ch08_sl013"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl010",
+        "phaladeepika_ch08_sl013",
+        "brihat_jataka_ch11_sl011",
+        "bphs_ch40_overview",
+        "bphs_ch34_sl010"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_063",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 11th house?",
+      "expected_chunks": [
+        "bphs_ch26_sl059",
+        "bphs_ch38_sl008",
+        "bphs_ch43_sl006"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl059",
+        "bphs_ch43_sl006",
+        "bphs_ch38_sl008",
+        "bphs_ch24_overview",
+        "bphs_ch26_sl023"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_064",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 12th house?",
+      "expected_chunks": [
+        "bphs_ch03_sl056",
+        "bphs_ch03_sl056_note_01",
+        "bphs_ch10_sl014_025"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch38_sl004",
+        "bphs_ch26_sl072",
+        "bphs_ch38_overview",
+        "phaladeepika_ch08_sl013",
+        "bphs_ch10_sl014_025"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_065",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 2th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl025",
+        "bphs_ch11_sl030",
+        "bphs_ch26_sl050"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch26_sl050",
+        "bphs_ch11_sl030",
+        "bphs_ch38_sl004",
+        "phaladeepika_ch08_sl010",
+        "bphs_ch11_sl025"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_066",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 3th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch16_sl007_011",
+        "bphs_ch16_sl007_011_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch16_sl007_011",
+        "phaladeepika_ch08_sl010",
+        "bphs_ch10_sl014_025",
+        "jataka_parijata_ch12_sl046",
+        "bphs_ch46_sl025_031"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_067",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 4th house?",
+      "expected_chunks": [
+        "bphs_ch17_sl005",
+        "bphs_ch18_sl004",
+        "bphs_ch37_sl008"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch37_sl008",
+        "bphs_ch38_sl004_2",
+        "phaladeepika_ch07_sl024",
+        "bphs_ch17_overview",
+        "phaladeepika_ch08_sl010"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_068",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 5th house?",
+      "expected_chunks": [
+        "bphs_ch18_sl005",
+        "bphs_ch18_sl006",
+        "bphs_ch18_sl007"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl016",
+        "bphs_ch18_sl005",
+        "bphs_ch18_sl009",
+        "bphs_ch18_overview",
+        "bphs_ch18_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_069",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 6th house?",
+      "expected_chunks": [
+        "bphs_ch19_sl002",
+        "phaladeepika_ch08_sl012"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch19_sl002",
+        "bphs_ch19_overview",
+        "phaladeepika_ch08_sl012",
+        "bphs_ch19_sl006_note_01",
+        "bphs_ch26_sl090"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_070",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 7th house?",
+      "expected_chunks": [
+        "bphs_ch03_sl019",
+        "bphs_ch20_sl006",
+        "bphs_ch20_sl006_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch20_sl006",
+        "bphs_ch20_overview",
+        "brihat_jataka_ch24_sl008",
+        "bphs_ch03_sl019",
+        "jataka_parijata_ch14_sl038"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_071",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 8th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "jataka_parijata_ch12_sl044",
+        "phaladeepika_ch08_sl012"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch10_sl014_025",
+        "phaladeepika_ch08_sl012",
+        "jataka_parijata_ch12_sl044",
+        "bphs_ch21_overview",
+        "bphs_ch21_sl002"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_072",
+      "category": "planet_house",
+      "query": "What is the effect of Mercury in the 9th house?",
+      "expected_chunks": [
+        "bphs_ch22_sl026",
+        "bphs_ch36_sl039_040",
+        "bphs_ch47_sl064_075"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch22_sl026",
+        "phaladeepika_ch08_sl013",
+        "bphs_ch36_sl039_040",
+        "jataka_parijata_ch14_sl079",
+        "bphs_ch47_sl064_075"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_073",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 1th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl039",
+        "brihat_jataka_ch02_sl007",
+        "brihat_jataka_ch04_sl010"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch11_sl039",
+        "phaladeepika_ch08_sl005",
+        "phaladeepika_ch13_sl013",
+        "phaladeepika_ch11_sl010",
+        "brihat_jataka_ch24_sl006"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_074",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 10th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch23_sl018",
+        "bphs_ch38_sl002_030"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch23_sl018",
+        "bphs_ch10_sl014_025",
+        "brihat_jataka_ch20_sl005_3",
+        "phaladeepika_ch08_sl007",
+        "brihat_jataka_ch23_sl007"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_075",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 11th house?",
+      "expected_chunks": [
+        "bphs_ch17_sl008",
+        "bphs_ch38_sl008",
+        "bphs_ch43_sl003"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch43_sl005",
+        "bphs_ch17_sl008",
+        "phaladeepika_ch08_sl007",
+        "bphs_ch43_sl008",
+        "brihat_jataka_ch20_sl005_3"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_076",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 12th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch16_sl007_011",
+        "bphs_ch16_sl007_011_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch35_sl063_074",
+        "bphs_ch39_sl006",
+        "bphs_ch10_sl014_025",
+        "phaladeepika_ch08_sl007",
+        "bphs_ch16_sl007_011"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_077",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 2th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl014_025",
+        "bphs_ch15_sl016",
+        "bphs_ch39_sl002_004"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch15_sl016",
+        "bphs_ch10_sl014_025",
+        "bphs_ch39_sl002_004",
+        "bphs_ch41_sl018",
+        "bphs_ch41_sl026_027"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_078",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 3th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl007_011",
+        "bphs_ch16_sl007_011",
+        "bphs_ch16_sl007_011_note_01"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch11_sl007_011",
+        "bphs_ch16_sl007_011",
+        "brihat_jataka_ch20_sl004_2",
+        "phaladeepika_ch08_sl005",
+        "bphs_ch46_sl025_031"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_079",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 4th house?",
+      "expected_chunks": [
+        "bphs_ch10_sl006_007",
+        "bphs_ch18_sl015",
+        "bphs_ch19_sl002"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch27_sl005",
+        "bphs_ch18_sl015",
+        "bphs_ch19_sl002",
+        "phaladeepika_ch08_sl006",
+        "brihat_jataka_ch23_sl008"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.4,
+          "recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "corpus_smoke_080",
+      "category": "planet_house",
+      "query": "What is the effect of Moon in the 5th house?",
+      "expected_chunks": [
+        "bphs_ch11_sl002",
+        "bphs_ch18_sl014",
+        "bphs_ch18_sl016"
+      ],
+      "retrieved_chunks": [
+        "bphs_ch18_sl016",
+        "bphs_ch11_sl002",
+        "bphs_ch18_sl014",
+        "phaladeepika_ch08_sl006",
+        "bphs_ch23_sl018"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 0.3333333333333333
+        },
+        "3": {
+          "hit": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "precision": 0.6,
+          "recall": 1.0
+        }
+      }
+    }
+  ]
+}

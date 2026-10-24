@@ -1,0 +1,752 @@
+{
+  "schema_version": "2.0",
+  "built_from": "the four user-provided OCR PDFs",
+  "corpus_path": "rag\\processed\\corpus.jsonl",
+  "page_inventory_path": "rag\\processed\\pages.jsonl",
+  "chunk_count": 2800,
+  "chunk_types": {
+    "commentary": 74,
+    "numbered_rule": 1014,
+    "prose": 8,
+    "rule": 1592,
+    "section_overview": 112
+  },
+  "chunks_by_book": {
+    "bphs": 1114,
+    "brihat_jataka": 454,
+    "jataka_parijata": 568,
+    "phaladeepika": 664
+  },
+  "books": [
+    {
+      "book_id": "bphs",
+      "title": "Brihat Parasara Hora Sastra",
+      "filename": "brihat hora sastra OCR(1).pdf",
+      "sha256": "f47137d00d3c435ee95355c9c56c9d868a3f7cb7d40c514e657ae768bc856f2a",
+      "pdf_pages": 657,
+      "main_start_pdf_page": 12,
+      "main_end_pdf_page_exclusive": 658,
+      "detected_chapters": [
+        {
+          "chapter_no": 1,
+          "title": "The Creation",
+          "pdf_page_start": 12,
+          "pdf_page_end": 19
+        },
+        {
+          "chapter_no": 2,
+          "title": "Great Incarnations of the Lord",
+          "pdf_page_start": 20,
+          "pdf_page_end": 22
+        },
+        {
+          "chapter_no": 3,
+          "title": "Planetary Characters And Description",
+          "pdf_page_start": 23,
+          "pdf_page_end": 60
+        },
+        {
+          "chapter_no": 4,
+          "title": "Zodiacal Signs Described",
+          "pdf_page_start": 61,
+          "pdf_page_end": 71
+        },
+        {
+          "chapter_no": 5,
+          "title": "To find out Planetary Position",
+          "pdf_page_start": 72,
+          "pdf_page_end": 97
+        },
+        {
+          "chapter_no": 6,
+          "title": "Special Ascendants",
+          "pdf_page_start": 98,
+          "pdf_page_end": 107
+        },
+        {
+          "chapter_no": 7,
+          "title": "The Sixteen Divisions of a Sign",
+          "pdf_page_start": 108,
+          "pdf_page_end": 146
+        },
+        {
+          "chapter_no": 8,
+          "title": "Divisional Consideration",
+          "pdf_page_start": 147,
+          "pdf_page_end": 164
+        },
+        {
+          "chapter_no": 9,
+          "title": "Aspects of The Signs",
+          "pdf_page_start": 165,
+          "pdf_page_end": 170
+        },
+        {
+          "chapter_no": 10,
+          "title": "Surroundings at the time of Birth",
+          "pdf_page_start": 171,
+          "pdf_page_end": 178
+        },
+        {
+          "chapter_no": 11,
+          "title": "Evils At Birth",
+          "pdf_page_start": 179,
+          "pdf_page_end": 193
+        },
+        {
+          "chapter_no": 12,
+          "title": "Anti-dotes to Evils",
+          "pdf_page_start": 194,
+          "pdf_page_end": 196
+        },
+        {
+          "chapter_no": 13,
+          "title": "Judgement of Houses",
+          "pdf_page_start": 197,
+          "pdf_page_end": 201
+        },
+        {
+          "chapter_no": 14,
+          "title": "Effects of The First House",
+          "pdf_page_start": 202,
+          "pdf_page_end": 208
+        },
+        {
+          "chapter_no": 15,
+          "title": "Effects of The Second House",
+          "pdf_page_start": 209,
+          "pdf_page_end": 218
+        },
+        {
+          "chapter_no": 16,
+          "title": "Effects of The Third House",
+          "pdf_page_start": 219,
+          "pdf_page_end": 227
+        },
+        {
+          "chapter_no": 17,
+          "title": "Effects of The Fourth House",
+          "pdf_page_start": 228,
+          "pdf_page_end": 231
+        },
+        {
+          "chapter_no": 18,
+          "title": "Effects of the Fifth House",
+          "pdf_page_start": 232,
+          "pdf_page_end": 240
+        },
+        {
+          "chapter_no": 19,
+          "title": "Effects of the Sixth House",
+          "pdf_page_start": 241,
+          "pdf_page_end": 248
+        },
+        {
+          "chapter_no": 20,
+          "title": "Effects Of The Seventh House",
+          "pdf_page_start": 249,
+          "pdf_page_end": 258
+        },
+        {
+          "chapter_no": 21,
+          "title": "Effects of the Eighth House",
+          "pdf_page_start": 259,
+          "pdf_page_end": 262
+        },
+        {
+          "chapter_no": 22,
+          "title": "Effects of the Ninth House",
+          "pdf_page_start": 263,
+          "pdf_page_end": 268
+        },
+        {
+          "chapter_no": 23,
+          "title": "Effects of the Tenth House",
+          "pdf_page_start": 269,
+          "pdf_page_end": 275
+        },
+        {
+          "chapter_no": 24,
+          "title": "Effects of the Eleventh House",
+          "pdf_page_start": 276,
+          "pdf_page_end": 278
+        },
+        {
+          "chapter_no": 25,
+          "title": "Effects of the Twelfth House",
+          "pdf_page_start": 279,
+          "pdf_page_end": 282
+        },
+        {
+          "chapter_no": 26,
+          "title": "Effects of the Bhava Lords",
+          "pdf_page_start": 283,
+          "pdf_page_end": 347
+        },
+        {
+          "chapter_no": 27,
+          "title": "Effects of Non Luminous Planets",
+          "pdf_page_start": 348,
+          "pdf_page_end": 366
+        },
+        {
+          "chapter_no": 28,
+          "title": "Evaluation of Planetary Aspects",
+          "pdf_page_start": 367,
+          "pdf_page_end": 392
+        },
+        {
+          "chapter_no": 29,
+          "title": "Evaluation of Strengths",
+          "pdf_page_start": 393,
+          "pdf_page_end": 420
+        },
+        {
+          "chapter_no": 30,
+          "title": "Istha and Kashta Balas",
+          "pdf_page_start": 421,
+          "pdf_page_end": 424
+        },
+        {
+          "chapter_no": 31,
+          "title": "Bhava Padas",
+          "pdf_page_start": 425,
+          "pdf_page_end": 435
+        },
+        {
+          "chapter_no": 32,
+          "title": "Upa Pada",
+          "pdf_page_start": 436,
+          "pdf_page_end": 445
+        },
+        {
+          "chapter_no": 33,
+          "title": "Argala or Planetary Intervention",
+          "pdf_page_start": 446,
+          "pdf_page_end": 450
+        },
+        {
+          "chapter_no": 34,
+          "title": "Planetary Karakatwas (Indications of Planets)",
+          "pdf_page_start": 451,
+          "pdf_page_end": 460
+        },
+        {
+          "chapter_no": 35,
+          "title": "Effects Of Karakamsha",
+          "pdf_page_start": 461,
+          "pdf_page_end": 478
+        },
+        {
+          "chapter_no": 36,
+          "title": "Yoga Karakas",
+          "pdf_page_start": 479,
+          "pdf_page_end": 500
+        },
+        {
+          "chapter_no": 37,
+          "title": "Nabhasa Yoga",
+          "pdf_page_start": 501,
+          "pdf_page_end": 523
+        },
+        {
+          "chapter_no": 38,
+          "title": "Miscellaneous Yogas",
+          "pdf_page_start": 524,
+          "pdf_page_end": 543
+        },
+        {
+          "chapter_no": 39,
+          "title": "The Lunar Yogas",
+          "pdf_page_start": 544,
+          "pdf_page_end": 548
+        },
+        {
+          "chapter_no": 40,
+          "title": "The Solar Yogas",
+          "pdf_page_start": 549,
+          "pdf_page_end": 550
+        },
+        {
+          "chapter_no": 41,
+          "title": "The Raja Yogas",
+          "pdf_page_start": 551,
+          "pdf_page_end": 561
+        },
+        {
+          "chapter_no": 42,
+          "title": "Yogas for Royal Association",
+          "pdf_page_start": 562,
+          "pdf_page_end": 565
+        },
+        {
+          "chapter_no": 43,
+          "title": "Special Combinations for Wealth",
+          "pdf_page_start": 566,
+          "pdf_page_end": 576
+        },
+        {
+          "chapter_no": 44,
+          "title": "Combinations for Penury",
+          "pdf_page_start": 577,
+          "pdf_page_end": 580
+        },
+        {
+          "chapter_no": 45,
+          "title": "Longevity",
+          "pdf_page_start": 581,
+          "pdf_page_end": 613
+        },
+        {
+          "chapter_no": 46,
+          "title": "Maraka Planets (Killers)",
+          "pdf_page_start": 614,
+          "pdf_page_end": 623
+        },
+        {
+          "chapter_no": 47,
+          "title": "> Avasthas Of Planets",
+          "pdf_page_start": 624,
+          "pdf_page_end": 657
+        }
+      ],
+      "notes": []
+    },
+    {
+      "book_id": "brihat_jataka",
+      "title": "Brihat Jataka",
+      "filename": "Brihat Jataka 2nd Ed. by V Subrahmanya Sastri_OCR(1).pdf",
+      "sha256": "07350b7882d319a26fd3dc509228f1cb937bf307ae9fe98ee37680e6fc55ac98",
+      "pdf_pages": 588,
+      "main_start_pdf_page": 36,
+      "main_end_pdf_page_exclusive": 589,
+      "detected_chapters": [
+        {
+          "chapter_no": 1,
+          "title": null,
+          "pdf_page_start": 36,
+          "pdf_page_end": 54
+        },
+        {
+          "chapter_no": 2,
+          "title": null,
+          "pdf_page_start": 55,
+          "pdf_page_end": 77
+        },
+        {
+          "chapter_no": 3,
+          "title": null,
+          "pdf_page_start": 78,
+          "pdf_page_end": 87
+        },
+        {
+          "chapter_no": 4,
+          "title": null,
+          "pdf_page_start": 88,
+          "pdf_page_end": 126
+        },
+        {
+          "chapter_no": 5,
+          "title": null,
+          "pdf_page_start": 127,
+          "pdf_page_end": 161
+        },
+        {
+          "chapter_no": 6,
+          "title": null,
+          "pdf_page_start": 162,
+          "pdf_page_end": 181
+        },
+        {
+          "chapter_no": 7,
+          "title": null,
+          "pdf_page_start": 182,
+          "pdf_page_end": 200
+        },
+        {
+          "chapter_no": 8,
+          "title": null,
+          "pdf_page_start": 201,
+          "pdf_page_end": 231
+        },
+        {
+          "chapter_no": 9,
+          "title": null,
+          "pdf_page_start": 232,
+          "pdf_page_end": 244
+        },
+        {
+          "chapter_no": 10,
+          "title": "The construction of the Ashtakavarga plate : nd the method",
+          "pdf_page_start": 245,
+          "pdf_page_end": 255
+        },
+        {
+          "chapter_no": 11,
+          "title": null,
+          "pdf_page_start": 256,
+          "pdf_page_end": 283
+        },
+        {
+          "chapter_no": 12,
+          "title": null,
+          "pdf_page_start": 284,
+          "pdf_page_end": 313
+        },
+        {
+          "chapter_no": 13,
+          "title": null,
+          "pdf_page_start": 314,
+          "pdf_page_end": 330
+        },
+        {
+          "chapter_no": 14,
+          "title": null,
+          "pdf_page_start": 331,
+          "pdf_page_end": 336
+        },
+        {
+          "chapter_no": 15,
+          "title": "TASTE",
+          "pdf_page_start": 337,
+          "pdf_page_end": 342
+        },
+        {
+          "chapter_no": 16,
+          "title": "RAM SA The several effects described in this chapter for the 27 asterisms may be classified as either goud or bad",
+          "pdf_page_start": 343,
+          "pdf_page_end": 352
+        },
+        {
+          "chapter_no": 17,
+          "title": null,
+          "pdf_page_start": 353,
+          "pdf_page_end": 369
+        },
+        {
+          "chapter_no": 18,
+          "title": null,
+          "pdf_page_start": 370,
+          "pdf_page_end": 398
+        },
+        {
+          "chapter_no": 19,
+          "title": null,
+          "pdf_page_start": 399,
+          "pdf_page_end": 403
+        },
+        {
+          "chapter_no": 20,
+          "title": null,
+          "pdf_page_start": 404,
+          "pdf_page_end": 426
+        },
+        {
+          "chapter_no": 21,
+          "title": null,
+          "pdf_page_start": 427,
+          "pdf_page_end": 438
+        },
+        {
+          "chapter_no": 22,
+          "title": null,
+          "pdf_page_start": 439,
+          "pdf_page_end": 444
+        },
+        {
+          "chapter_no": 23,
+          "title": null,
+          "pdf_page_start": 445,
+          "pdf_page_end": 474
+        },
+        {
+          "chapter_no": 24,
+          "title": "ALABAMA THE HOROSCOPES OF FEMALES The Science of stars has much to do with females",
+          "pdf_page_start": 475,
+          "pdf_page_end": 501
+        },
+        {
+          "chapter_no": 25,
+          "title": null,
+          "pdf_page_start": 502,
+          "pdf_page_end": 524
+        },
+        {
+          "chapter_no": 26,
+          "title": "ASSTMATPATS This Chapter consists of 17 stanzas laying down rules for the recording of horoscopes of persons the",
+          "pdf_page_start": 525,
+          "pdf_page_end": 548
+        },
+        {
+          "chapter_no": 27,
+          "title": null,
+          "pdf_page_start": 549,
+          "pdf_page_end": 577
+        },
+        {
+          "chapter_no": 28,
+          "title": null,
+          "pdf_page_start": 578,
+          "pdf_page_end": 588
+        }
+      ],
+      "notes": []
+    },
+    {
+      "book_id": "jataka_parijata",
+      "title": "Jataka Parijata",
+      "filename": "Jataka Parijata_OCR(1).pdf",
+      "sha256": "8c4d1c242ebe1d0e41be2a0360a70b811cf819c88413e5d17490f032c085853d",
+      "pdf_pages": 682,
+      "main_start_pdf_page": 29,
+      "main_end_pdf_page_exclusive": 475,
+      "detected_chapters": [
+        {
+          "chapter_no": 10,
+          "title": null,
+          "pdf_page_start": 29,
+          "pdf_page_end": 87
+        },
+        {
+          "chapter_no": 11,
+          "title": "THe ECTS OF THE 1ST AND THE OND RHAVAS, CRS REET TARE ARSE aati gat",
+          "pdf_page_start": 88,
+          "pdf_page_end": 122
+        },
+        {
+          "chapter_no": 12,
+          "title": "“THE EFFECTS OF THE 380 AND FU 4TH BHAYAS,",
+          "pdf_page_start": 123,
+          "pdf_page_end": 187
+        },
+        {
+          "chapter_no": 13,
+          "title": null,
+          "pdf_page_start": 188,
+          "pdf_page_end": 239
+        },
+        {
+          "chapter_no": 14,
+          "title": "; . THE EFFECTS OF Tuk 7TH, 8TH AND THE OTH BHAVAS,",
+          "pdf_page_start": 240,
+          "pdf_page_end": 291
+        },
+        {
+          "chapter_no": 15,
+          "title": "THE",
+          "pdf_page_start": 292,
+          "pdf_page_end": 329
+        },
+        {
+          "chapter_no": 16,
+          "title": "FINALL HOROSCOUT",
+          "pdf_page_start": 330,
+          "pdf_page_end": 359
+        },
+        {
+          "chapter_no": 17,
+          "title": "KALACHARRADASA  The (¥rv=aw) kalachakra system of ayurdaya referred toal®",
+          "pdf_page_start": 360,
+          "pdf_page_end": 400
+        },
+        {
+          "chapter_no": 18,
+          "title": "ON 1344 AND ANTARDAS AS | SFA",
+          "pdf_page_start": 401,
+          "pdf_page_end": 474
+        }
+      ],
+      "notes": [
+        "Uploaded OCR has no detected main-text headings for Adhyaya 1, 2, 3, 4, 5, 6, 7, 8, 9, 19; coverage should be treated as partial, not complete."
+      ]
+    },
+    {
+      "book_id": "phaladeepika",
+      "title": "Phaladeepika",
+      "filename": "Mantreswaras-Phaladeepika_OCR(1).pdf",
+      "sha256": "ab2bdcba16e71473f825b9bd62b1b4d36e6d79023fc667a999d65493a4f65ec1",
+      "pdf_pages": 476,
+      "main_start_pdf_page": 38,
+      "main_end_pdf_page_exclusive": 396,
+      "detected_chapters": [
+        {
+          "chapter_no": 1,
+          "title": null,
+          "pdf_page_start": 38,
+          "pdf_page_end": 46
+        },
+        {
+          "chapter_no": 2,
+          "title": null,
+          "pdf_page_start": 47,
+          "pdf_page_end": 60
+        },
+        {
+          "chapter_no": 3,
+          "title": null,
+          "pdf_page_start": 61,
+          "pdf_page_end": 77
+        },
+        {
+          "chapter_no": 4,
+          "title": null,
+          "pdf_page_start": 78,
+          "pdf_page_end": 79
+        },
+        {
+          "chapter_no": 5,
+          "title": null,
+          "pdf_page_start": 80,
+          "pdf_page_end": 83
+        },
+        {
+          "chapter_no": 6,
+          "title": null,
+          "pdf_page_start": 84,
+          "pdf_page_end": 108
+        },
+        {
+          "chapter_no": 7,
+          "title": null,
+          "pdf_page_start": 109,
+          "pdf_page_end": 118
+        },
+        {
+          "chapter_no": 8,
+          "title": "Sioku D.--If the Sun occupy the Ist house ata person's birth, he will have very little hair; he will be most inactive to do any work; he will be angry and",
+          "pdf_page_start": 119,
+          "pdf_page_end": 135
+        },
+        {
+          "chapter_no": 9,
+          "title": null,
+          "pdf_page_start": 136,
+          "pdf_page_end": 141
+        },
+        {
+          "chapter_no": 10,
+          "title": null,
+          "pdf_page_start": 142,
+          "pdf_page_end": 147
+        },
+        {
+          "chapter_no": 11,
+          "title": null,
+          "pdf_page_start": 148,
+          "pdf_page_end": 152
+        },
+        {
+          "chapter_no": 12,
+          "title": null,
+          "pdf_page_start": 153,
+          "pdf_page_end": 166
+        },
+        {
+          "chapter_no": 13,
+          "title": null,
+          "pdf_page_start": 167,
+          "pdf_page_end": 177
+        },
+        {
+          "chapter_no": 14,
+          "title": null,
+          "pdf_page_start": 178,
+          "pdf_page_end": 187
+        },
+        {
+          "chapter_no": 15,
+          "title": null,
+          "pdf_page_start": 188,
+          "pdf_page_end": 199
+        },
+        {
+          "chapter_no": 16,
+          "title": null,
+          "pdf_page_start": 200,
+          "pdf_page_end": 211
+        },
+        {
+          "chapter_no": 17,
+          "title": "Sleka 1.~With respect to any Bhava, when Saturn in his transit should arrive at the Rasi and Navamsa",
+          "pdf_page_start": 212,
+          "pdf_page_end": 220
+        },
+        {
+          "chapter_no": 18,
+          "title": null,
+          "pdf_page_start": 221,
+          "pdf_page_end": 228
+        },
+        {
+          "chapter_no": 19,
+          "title": "Sioka L.~-The nine planets who were worshipped in many ways with devotion for a long time by sage Parasara, having been pleased, bestowed npon him the",
+          "pdf_page_start": 229,
+          "pdf_page_end": 237
+        },
+        {
+          "chapter_no": 20,
+          "title": null,
+          "pdf_page_start": 238,
+          "pdf_page_end": 257
+        },
+        {
+          "chapter_no": 21,
+          "title": "Nature of Bhuktis and Antaras",
+          "pdf_page_start": 258,
+          "pdf_page_end": 279
+        },
+        {
+          "chapter_no": 22,
+          "title": null,
+          "pdf_page_start": 280,
+          "pdf_page_end": 293
+        },
+        {
+          "chapter_no": 23,
+          "title": "fit Sioka 1.-~~-In order to ascertain the good and bad effects caused by the several planets in their transits through the Rasis of the zodiac, the Ashtakavarga has",
+          "pdf_page_start": 294,
+          "pdf_page_end": 305
+        },
+        {
+          "chapter_no": 24,
+          "title": null,
+          "pdf_page_start": 306,
+          "pdf_page_end": 315
+        },
+        {
+          "chapter_no": 25,
+          "title": null,
+          "pdf_page_start": 316,
+          "pdf_page_end": 322
+        },
+        {
+          "chapter_no": 26,
+          "title": null,
+          "pdf_page_start": 323,
+          "pdf_page_end": 355
+        },
+        {
+          "chapter_no": 27,
+          "title": null,
+          "pdf_page_start": 356,
+          "pdf_page_end": 359
+        },
+        {
+          "chapter_no": 28,
+          "title": null,
+          "pdf_page_start": 360,
+          "pdf_page_end": 395
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "method": {
+    "primary_unit": "sloka/rule segment when an OCR sloka marker is available; numbered-rule fallback for BPHS; page/prose fallback otherwise",
+    "raw_source_preserved": true,
+    "llm_rewriting_during_ingestion": false,
+    "semantic_text_field": "retrieval_text",
+    "main_text_only": true,
+    "index_excluded": true
+  }
+}

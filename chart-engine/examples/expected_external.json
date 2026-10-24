@@ -1,0 +1,22 @@
+{
+  "source": "REPLACE ME: Prokerala / AstrologyAPI / printed chart",
+  "note": "Positions are sidereal Lahiri longitudes. Accepts decimals or 'Sign D M S'.",
+  "input": {
+    "birth_date": "2004-05-17",
+    "birth_time": "14:35:00",
+    "latitude": 25.4358,
+    "longitude": 81.8463
+  },
+  "ascendant": "Virgo 9 14 41",
+  "planets": {
+    "Sun": "Taurus 2 52 44",
+    "Moon": "Aries 12 44 15",
+    "Mars": "Gemini 12 25 41",
+    "Mercury": "Aries 7 14 53",
+    "Jupiter": "Leo 15 13 34",
+    "Venus": "Gemini 2 13 03",
+    "Saturn": "Gemini 16 32 17",
+    "Rahu": "Aries 16 30 45",
+    "Ketu": "Libra 16 30 45"
+  }
+}

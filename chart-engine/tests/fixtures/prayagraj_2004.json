@@ -1,0 +1,81 @@
+{
+  "input": {
+    "birth_date": "2004-05-17",
+    "birth_time": "14:35",
+    "latitude": 25.4358,
+    "longitude": 81.8463,
+    "timezone": null
+  },
+  "expected": {
+    "utc_datetime": "2004-05-17T09:05:00Z",
+    "julian_day_ut": 2453142.878467252,
+    "ascendant_sign": "Virgo",
+    "ascendant_longitude": 159.244592,
+    "planets": {
+      "Sun": {
+        "longitude": 32.878821,
+        "sign": "Taurus",
+        "house": 9,
+        "nakshatra": "Krittika",
+        "pada": 2
+      },
+      "Moon": {
+        "longitude": 12.737404,
+        "sign": "Aries",
+        "house": 8,
+        "nakshatra": "Ashwini",
+        "pada": 4
+      },
+      "Mars": {
+        "longitude": 72.428103,
+        "sign": "Gemini",
+        "house": 10,
+        "nakshatra": "Ardra",
+        "pada": 2
+      },
+      "Mercury": {
+        "longitude": 7.248066,
+        "sign": "Aries",
+        "house": 8,
+        "nakshatra": "Ashwini",
+        "pada": 3
+      },
+      "Jupiter": {
+        "longitude": 135.225991,
+        "sign": "Leo",
+        "house": 12,
+        "nakshatra": "Purva Phalguni",
+        "pada": 1
+      },
+      "Venus": {
+        "longitude": 62.217467,
+        "sign": "Gemini",
+        "house": 10,
+        "nakshatra": "Mrigashira",
+        "pada": 3
+      },
+      "Saturn": {
+        "longitude": 76.537959,
+        "sign": "Gemini",
+        "house": 10,
+        "nakshatra": "Ardra",
+        "pada": 3
+      },
+      "Rahu": {
+        "longitude": 16.512633,
+        "sign": "Aries",
+        "house": 8,
+        "nakshatra": "Bharani",
+        "pada": 1
+      },
+      "Ketu": {
+        "longitude": 196.512633,
+        "sign": "Libra",
+        "house": 2,
+        "nakshatra": "Swati",
+        "pada": 3
+      }
+    },
+    "birth_mahadasha": "Ketu"
+  }
+}
